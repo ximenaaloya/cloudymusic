@@ -10,6 +10,9 @@
     <height>691</height>
    </rect>
   </property>
+  <property name="cursor">
+   <cursorShape>ArrowCursor</cursorShape>
+  </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
@@ -20,7 +23,6 @@ border-bottom:1px solid rgb(85, 0, 127);
 border-radius:15px;
 }
 .boton:hover{
-cursor: pointer;
 background-color:rgb(133, 121, 252);
 }
 .line{
@@ -150,6 +152,9 @@ background-color:rgb(3, 2, 7);
                   <width>16777215</width>
                   <height>40</height>
                  </size>
+                </property>
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
                 </property>
                 <property name="text">
                  <string>Ingresar</string>
