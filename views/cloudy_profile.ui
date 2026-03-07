@@ -327,7 +327,7 @@ height:40px;
                  <string notr="true">color:rgb(175, 167, 255);</string>
                 </property>
                 <property name="text">
-                 <string>&quot;Nombre&quot;</string>
+                 <string>Nombre</string>
                 </property>
                </widget>
               </item>

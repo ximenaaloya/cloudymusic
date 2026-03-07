@@ -48,6 +48,7 @@ class Profile(QtWidgets.QMainWindow):
         elif boton == self.btn_mo:
             self.lbl_name.setStyleSheet("color: #aa00ff;")
             print("morado")
+    
 
 
 
