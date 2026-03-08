@@ -10,6 +10,10 @@ class Login(QtWidgets.QMainWindow):
         super().__init__()
         uic.loadUi("./views/login.ui", self)
         self.controller = LoginController(self, self)
+class Library(QtWidgets.QMainWindow):
+    def __init__(self):
+        super().__init__()
+        uic.loadUi("./views/library.ui", self)
 
 class Profile(QtWidgets.QMainWindow):
     def __init__(self):
@@ -18,6 +22,7 @@ class Profile(QtWidgets.QMainWindow):
         self.cmb_gen.addItems(["", "Pop", "Hip-Hop", "Rock", "Reggaetón","R&B"])
         self.btn_m.clicked.connect(self.change_m)
         self.btn_h.clicked.connect(self.change_h)
+        self.btn_aceptar.clicked.connect(self.show_lib)
 
         self.btn_v.clicked.connect(self.change_color)
         self.btn_a.clicked.connect(self.change_color)
@@ -48,34 +53,24 @@ class Profile(QtWidgets.QMainWindow):
         elif boton == self.btn_mo:
             self.lbl_name.setStyleSheet("color: #aa00ff;")
             print("morado")
-    
 
-
-
-class Library(QtWidgets.QMainWindow):
-    def __init__(self):
-        super().__init__()
-        uic.load_ui("./views/cloudy_library.ui,self")
+    def show_lib(self):
+        self.library_window = Library()
+        self.profile_window = Profile()
+        self.profile_window.close()
+        self.library_window.show()
 
 class AppManager:
     def __init__(self):
         self.login_window = Login()
         self.cloudy_profile_window = Profile()
+        self.library_window = Library()
         self.login_window.login_successful.connect(self.show_main_window)
         self.login_window.show()
     def show_main_window(self):
         self.cloudy_profile_window.show()
         self.login_window.close()
 
-class AppManager:
-    def __init__(self):
-        self.cloudy_profile_window = Profile()
-        self.library_window = Library()
-        self.cloudy_profile_window.profile_successful.connect(self.show_main_window)
-        self.cloudy_profile_window.show()
-    def show_main_window(self):
-        self.library_window.show()
-        self.cloudy_profile_window.close()
 
 app = QtWidgets.QApplication(sys.argv)
 manager = AppManager()
