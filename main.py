@@ -10,6 +10,7 @@ class Login(QtWidgets.QMainWindow):
         super().__init__()
         uic.loadUi("./views/login.ui", self)
         self.controller = LoginController(self, self)
+
 class Library(QtWidgets.QMainWindow):
     def __init__(self):
         super().__init__()
@@ -43,16 +44,12 @@ class Profile(QtWidgets.QMainWindow):
         boton = self.sender()
         if boton == self.btn_v:
             self.lbl_name.setStyleSheet("color: #55ff00;")
-            print("verde")
         elif boton == self.btn_r:
             self.lbl_name.setStyleSheet("color: #ff0080;")
-            print("rosa")
         elif boton == self.btn_a:
             self.lbl_name.setStyleSheet("color: #00aaff;")
-            print("azul")
         elif boton == self.btn_mo:
             self.lbl_name.setStyleSheet("color: #aa00ff;")
-            print("morado")
 
     def show_lib(self):
         self.library_window = Library()
@@ -66,7 +63,7 @@ class AppManager:
         self.cloudy_profile_window = Profile()
         self.library_window = Library()
         self.login_window.login_successful.connect(self.show_main_window)
-        self.login_window.show()
+        self.cloudy_profile_window.show()#cambiar a login_window
     def show_main_window(self):
         self.cloudy_profile_window.show()
         self.login_window.close()
