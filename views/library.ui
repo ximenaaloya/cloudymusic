@@ -44,13 +44,13 @@
             <property name="minimumSize">
              <size>
               <width>1000</width>
-              <height>80</height>
+              <height>50</height>
              </size>
             </property>
             <property name="maximumSize">
              <size>
               <width>1000</width>
-              <height>80</height>
+              <height>50</height>
              </size>
             </property>
             <property name="frameShape">
@@ -144,13 +144,13 @@
             <property name="minimumSize">
              <size>
               <width>1000</width>
-              <height>120</height>
+              <height>100</height>
              </size>
             </property>
             <property name="maximumSize">
              <size>
               <width>1000</width>
-              <height>120</height>
+              <height>100</height>
              </size>
             </property>
             <property name="frameShape">
@@ -164,14 +164,14 @@
               <widget class="QPushButton" name="pushButton_23">
                <property name="minimumSize">
                 <size>
-                 <width>100</width>
-                 <height>100</height>
+                 <width>80</width>
+                 <height>80</height>
                 </size>
                </property>
                <property name="maximumSize">
                 <size>
-                 <width>100</width>
-                 <height>100</height>
+                 <width>80</width>
+                 <height>80</height>
                 </size>
                </property>
                <property name="text">
@@ -187,14 +187,14 @@
               <widget class="QPushButton" name="pushButton_24">
                <property name="minimumSize">
                 <size>
-                 <width>100</width>
-                 <height>100</height>
+                 <width>80</width>
+                 <height>80</height>
                 </size>
                </property>
                <property name="maximumSize">
                 <size>
                  <width>80</width>
-                 <height>100</height>
+                 <height>80</height>
                 </size>
                </property>
                <property name="text">
@@ -210,14 +210,14 @@
               <widget class="QPushButton" name="pushButton_25">
                <property name="minimumSize">
                 <size>
-                 <width>100</width>
-                 <height>100</height>
+                 <width>80</width>
+                 <height>80</height>
                 </size>
                </property>
                <property name="maximumSize">
                 <size>
-                 <width>100</width>
-                 <height>100</height>
+                 <width>80</width>
+                 <height>80</height>
                 </size>
                </property>
                <property name="text">
@@ -233,14 +233,14 @@
               <widget class="QPushButton" name="pushButton_26">
                <property name="minimumSize">
                 <size>
-                 <width>100</width>
-                 <height>100</height>
+                 <width>80</width>
+                 <height>80</height>
                 </size>
                </property>
                <property name="maximumSize">
                 <size>
-                 <width>100</width>
-                 <height>100</height>
+                 <width>80</width>
+                 <height>80</height>
                 </size>
                </property>
                <property name="text">
@@ -332,7 +332,7 @@
             <property name="maximumSize">
              <size>
               <width>1000</width>
-              <height>500</height>
+              <height>480</height>
              </size>
             </property>
             <property name="frameShape">
@@ -621,7 +621,7 @@
                </property>
                <property name="icon">
                 <iconset>
-                 <normaloff>../../../../../Downloads/search.png</normaloff>../../../../../Downloads/search.png</iconset>
+                 <normaloff>../../../../../Downloads/add.png</normaloff>../../../../../Downloads/add.png</iconset>
                </property>
               </widget>
              </item>
