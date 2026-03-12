@@ -163,7 +163,7 @@
           <property name="frameShadow">
            <enum>QFrame::Raised</enum>
           </property>
-          <widget class="QPushButton" name="pushButton">
+          <widget class="QPushButton" name="btn_agregar">
            <property name="geometry">
             <rect>
              <x>960</x>
