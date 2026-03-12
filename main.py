@@ -1,6 +1,9 @@
 from PyQt6 import QtWidgets, uic
 import sys
 from controllers.login_controller import LoginController
+from controllers.playlist_controller import PlaylistController
+from controllers.library_controller import LibraryController
+from controllers.perfil_controller import PerfilController
 from PyQt6.QtCore import Qt, pyqtSignal
 from PyQt6.QtGui import QPalette
 
@@ -12,61 +15,49 @@ class Login(QtWidgets.QMainWindow):
         self.controller = LoginController(self, self)
 
 class Library(QtWidgets.QMainWindow):
+    library_successful = pyqtSignal()
     def __init__(self):
         super().__init__()
         uic.loadUi("./views/library.ui", self)
+        self.controller = LibraryController(self, self)
 
 class Profile(QtWidgets.QMainWindow):
+    perfil_successful = pyqtSignal()
     def __init__(self):
         super().__init__()
         uic.loadUi("./views/cloudy_profile.ui", self)
-        self.cmb_gen.addItems(["", "Pop", "Hip-Hop", "Rock", "Reggaetón","R&B"])
-        self.btn_m.clicked.connect(self.change_m)
-        self.btn_h.clicked.connect(self.change_h)
-        self.btn_aceptar.clicked.connect(self.show_lib)
+        self.controller = PerfilController(self, self)
 
-        self.btn_v.clicked.connect(self.change_color)
-        self.btn_a.clicked.connect(self.change_color)
-        self.btn_r.clicked.connect(self.change_color)
-        self.btn_mo.clicked.connect(self.change_color)
-
-    def change_m(self):
-        ruta = "./img/woman.png"
-        ruta = ruta.replace("\\", "/")
-        self.lbl_pic.setStyleSheet(f"border-image: url({ruta});")
-
-    def change_h(self):
-        ruta = "./img/men.png"
-        ruta = ruta.replace("\\", "/")
-        self.lbl_pic.setStyleSheet(f"border-image: url({ruta});")
-
-    def change_color(self):
-        boton = self.sender()
-        if boton == self.btn_v:
-            self.lbl_name.setStyleSheet("color: #55ff00;")
-        elif boton == self.btn_r:
-            self.lbl_name.setStyleSheet("color: #ff0080;")
-        elif boton == self.btn_a:
-            self.lbl_name.setStyleSheet("color: #00aaff;")
-        elif boton == self.btn_mo:
-            self.lbl_name.setStyleSheet("color: #aa00ff;")
-
-    def show_lib(self):
-        self.library_window = Library()
-        self.profile_window = Profile()
-        self.profile_window.close()
-        self.library_window.show()
-
+class Playlist(QtWidgets.QMainWindow):
+    playlist_successful = pyqtSignal()
+    def __init__(self):
+        super().__init__()
+        uic.loadUi("./views/playlist.ui", self)
+        self.controller = PlaylistController(self, self)
 class AppManager:
     def __init__(self):
         self.login_window = Login()
         self.cloudy_profile_window = Profile()
         self.library_window = Library()
+        self.playlist_window= Playlist()
+
+        #dar de alta las seniales
         self.login_window.login_successful.connect(self.show_main_window)
+        self.cloudy_profile_window.perfil_successful.connect(self.show_library_window)
+        self.library_window.library_successful.connect(self.show_playlist_window)
         self.cloudy_profile_window.show()#cambiar a login_window
+        
     def show_main_window(self):
-        self.cloudy_profile_window.show()
+        self.library_window.show()
         self.login_window.close()
+         
+    def show_library_window(self):
+        self.library_window.show()
+        self.cloudy_profile_window.close()
+    def show_playlist_window(self):
+        self.playlist_window.show()
+        self.library_window.close()
+        print("HOLA")
 
 
 app = QtWidgets.QApplication(sys.argv)

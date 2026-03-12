@@ -184,7 +184,7 @@
               </widget>
              </item>
              <item>
-              <widget class="QPushButton" name="pushButton_24">
+              <widget class="QPushButton" name="btn_playlist">
                <property name="minimumSize">
                 <size>
                  <width>80</width>
