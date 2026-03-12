@@ -3,7 +3,8 @@ import sys
 from controllers.login_controller import LoginController
 from controllers.playlist_controller import PlaylistController
 from controllers.library_controller import LibraryController
-from controllers.perfil_controller import PerfilController
+from controllers.profile_controller import ProfileController
+from controllers.song_controller import SongController
 from PyQt6.QtCore import Qt, pyqtSignal
 from PyQt6.QtGui import QPalette
 
@@ -22,11 +23,11 @@ class Library(QtWidgets.QMainWindow):
         self.controller = LibraryController(self, self)
 
 class Profile(QtWidgets.QMainWindow):
-    perfil_successful = pyqtSignal()
+    profile_successful = pyqtSignal()
     def __init__(self):
         super().__init__()
         uic.loadUi("./views/cloudy_profile.ui", self)
-        self.controller = PerfilController(self, self)
+        self.controller = ProfileController(self, self)
 
 class Playlist(QtWidgets.QMainWindow):
     playlist_successful = pyqtSignal()
@@ -34,21 +35,29 @@ class Playlist(QtWidgets.QMainWindow):
         super().__init__()
         uic.loadUi("./views/playlist.ui", self)
         self.controller = PlaylistController(self, self)
+class Song(QtWidgets.QMainWindow):
+    song_succesful = pyqtSignal()
+    def __init__(self):
+        super().__init__()
+        uic.loadUi("./views/song.ui", self)
+        self.controller = SongController(self, self)
 class AppManager:
     def __init__(self):
         self.login_window = Login()
         self.cloudy_profile_window = Profile()
         self.library_window = Library()
         self.playlist_window= Playlist()
+        self.song_window= Song()
 
         #dar de alta las seniales
         self.login_window.login_successful.connect(self.show_main_window)
-        self.cloudy_profile_window.perfil_successful.connect(self.show_library_window)
+        self.cloudy_profile_window.profile_successful.connect(self.show_library_window)
         self.library_window.library_successful.connect(self.show_playlist_window)
-        self.cloudy_profile_window.show()#cambiar a login_window
+        self.playlist_window.playlist_successful.connect(self.show_song_window)
+        self.login_window.show()#cambiar
         
     def show_main_window(self):
-        self.library_window.show()
+        self.cloudy_profile_window.show()
         self.login_window.close()
          
     def show_library_window(self):
@@ -57,7 +66,9 @@ class AppManager:
     def show_playlist_window(self):
         self.playlist_window.show()
         self.library_window.close()
-        print("HOLA")
+    def show_song_window(self):
+        self.playlist_window.close()
+        self.song_window.show()
 
 
 app = QtWidgets.QApplication(sys.argv)
