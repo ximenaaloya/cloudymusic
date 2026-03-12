@@ -341,221 +341,52 @@
             <property name="frameShadow">
              <enum>QFrame::Raised</enum>
             </property>
-            <widget class="QLabel" name="label_3">
-             <property name="geometry">
-              <rect>
-               <x>30</x>
-               <y>0</y>
-               <width>100</width>
-               <height>100</height>
-              </rect>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>100</width>
-               <height>100</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>100</width>
-               <height>100</height>
-              </size>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">border-image:url(&quot;img/a.jpg&quot;);</string>
-             </property>
-             <property name="text">
-              <string/>
-             </property>
-            </widget>
-            <widget class="QLabel" name="label_6">
-             <property name="geometry">
-              <rect>
-               <x>30</x>
-               <y>110</y>
-               <width>100</width>
-               <height>100</height>
-              </rect>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>100</width>
-               <height>100</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>100</width>
-               <height>100</height>
-              </size>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">border-image:url(&quot;img/b.jpg&quot;);
-</string>
-             </property>
-             <property name="text">
-              <string/>
-             </property>
-            </widget>
-            <widget class="QLabel" name="label_7">
-             <property name="geometry">
-              <rect>
-               <x>30</x>
-               <y>220</y>
-               <width>100</width>
-               <height>100</height>
-              </rect>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>100</width>
-               <height>100</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>100</width>
-               <height>100</height>
-              </size>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">border-image:url(&quot;img/c.jpg&quot;);
-</string>
-             </property>
-             <property name="text">
-              <string/>
-             </property>
-            </widget>
-            <widget class="QLabel" name="label_8">
-             <property name="geometry">
-              <rect>
-               <x>30</x>
-               <y>330</y>
-               <width>100</width>
-               <height>100</height>
-              </rect>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>100</width>
-               <height>100</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>100</width>
-               <height>100</height>
-              </size>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">border-image:url(&quot;img/d.jpg&quot;);
-</string>
-             </property>
-             <property name="text">
-              <string/>
-             </property>
-            </widget>
-            <widget class="QPushButton" name="pushButton_28">
-             <property name="geometry">
-              <rect>
-               <x>170</x>
-               <y>30</y>
-               <width>400</width>
-               <height>25</height>
-              </rect>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>400</width>
-               <height>25</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>400</width>
-               <height>25</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>PushButton</string>
-             </property>
-            </widget>
-            <widget class="QPushButton" name="pushButton_29">
-             <property name="geometry">
-              <rect>
-               <x>170</x>
-               <y>150</y>
-               <width>400</width>
-               <height>25</height>
-              </rect>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>400</width>
-               <height>25</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>400</width>
-               <height>25</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>PushButton</string>
-             </property>
-            </widget>
-            <widget class="QPushButton" name="pushButton_30">
-             <property name="geometry">
-              <rect>
-               <x>170</x>
-               <y>260</y>
-               <width>400</width>
-               <height>25</height>
-              </rect>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>400</width>
-               <height>25</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>400</width>
-               <height>25</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>PushButton</string>
-             </property>
-            </widget>
-            <widget class="QPushButton" name="pushButton_31">
-             <property name="geometry">
-              <rect>
-               <x>170</x>
-               <y>370</y>
-               <width>400</width>
-               <height>25</height>
-              </rect>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>400</width>
-               <height>25</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>400</width>
-               <height>25</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>PushButton</string>
-             </property>
-            </widget>
+            <layout class="QHBoxLayout" name="horizontalLayout">
+             <item>
+              <widget class="QTableWidget" name="tableWidget">
+               <column>
+                <property name="text">
+                 <string>Imagen</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Canción</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Artista</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Álbum</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Duración</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Género</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Likes</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Favorito</string>
+                </property>
+               </column>
+              </widget>
+             </item>
+            </layout>
            </widget>
           </item>
           <item>
