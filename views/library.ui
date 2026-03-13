@@ -14,7 +14,8 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">.boton{
+   <string notr="true">.fondo{background-color:rgb(209, 204, 255)}
+.boton{
 background-color:rgb(175, 167, 255);
 border-bottom:1px solid rgb(85, 0, 127);
 border-radius:15px;
@@ -22,6 +23,9 @@ border-radius:15px;
 .boton:hover{
 background-color:rgb(133, 121, 252);
 }</string>
+  </property>
+  <property name="class" stdset="0">
+   <string>fondo</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout_3">
