@@ -38,10 +38,14 @@ border-radius:10px;
 .boton:hover{
 background-color:rgb(133, 121, 252);
 }
+.fondo{
+background-color: rgb(209, 204, 255);
+}
+
 </string>
   </property>
   <property name="class" stdset="0">
-   <string/>
+   <string>fondo</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QHBoxLayout" name="horizontalLayout">

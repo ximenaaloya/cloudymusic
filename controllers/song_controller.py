@@ -5,8 +5,8 @@ class SongController:
         self.window.btn_aceptar.clicked.connect(self.add_song)
         
     def add_song(self):
-        name = self.window.txt_name.toPlainText()
-        artist = self.window.txt_artist.toPlainText()
+        name = self.window.txt_name.text()
+        artist = self.window.txt_artist.text()
         self.window.lbl_name.setText(name)
         self.window.lbl_artist.setText(artist)
         song = [name, artist]
