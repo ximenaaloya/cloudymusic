@@ -253,7 +253,7 @@ background-color:rgb(133, 121, 252);
                </property>
                <property name="icon">
                 <iconset>
-                 <normaloff>../../../../../Downloads/music_more.png</normaloff>../../../../../Downloads/music_more.png</iconset>
+                 <normaloff>../img/music_more.png</normaloff>../img/music_more.png</iconset>
                </property>
                <property name="class" stdset="0">
                 <string>boton</string>
