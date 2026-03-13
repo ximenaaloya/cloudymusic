@@ -75,7 +75,7 @@
                 </size>
                </property>
                <property name="styleSheet">
-                <string notr="true">background-color: #aa00ff;</string>
+                <string notr="true">background-color: #c00afc;</string>
                </property>
                <property name="text">
                 <string>Music</string>
@@ -97,7 +97,7 @@
                 </size>
                </property>
                <property name="styleSheet">
-                <string notr="true">background-color: #aa00ff;</string>
+                <string notr="true">background-color: #c26ceb;</string>
                </property>
                <property name="text">
                 <string>Video</string>
