@@ -13,6 +13,16 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">.boton{
+background-color:rgb(175, 167, 255);
+border-bottom:1px solid rgb(85, 0, 127);
+border-radius:15px;
+}
+.boton:hover{
+background-color:rgb(133, 121, 252);
+}</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QFrame" name="frame">
     <property name="geometry">
@@ -238,7 +248,7 @@
               </size>
              </property>
              <property name="styleSheet">
-              <string notr="true">background-color: #aa00ff;</string>
+              <string notr="true"/>
              </property>
              <property name="text">
               <string/>
@@ -246,6 +256,9 @@
              <property name="icon">
               <iconset>
                <normaloff>../../../../../Downloads/music_more.png</normaloff>../../../../../Downloads/music_more.png</iconset>
+             </property>
+             <property name="class" stdset="0">
+              <string>boton</string>
              </property>
             </widget>
            </item>

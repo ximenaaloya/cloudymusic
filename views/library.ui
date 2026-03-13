@@ -13,6 +13,16 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">.boton{
+background-color:rgb(175, 167, 255);
+border-bottom:1px solid rgb(85, 0, 127);
+border-radius:15px;
+}
+.boton:hover{
+background-color:rgb(133, 121, 252);
+}</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout_3">
     <item alignment="Qt::AlignHCenter">
@@ -75,10 +85,13 @@
                 </size>
                </property>
                <property name="styleSheet">
-                <string notr="true">background-color: #c00afc;</string>
+                <string notr="true"/>
                </property>
                <property name="text">
                 <string>Music</string>
+               </property>
+               <property name="class" stdset="0">
+                <string>boton</string>
                </property>
               </widget>
              </item>
@@ -97,10 +110,13 @@
                 </size>
                </property>
                <property name="styleSheet">
-                <string notr="true">background-color: #c26ceb;</string>
+                <string notr="true"/>
                </property>
                <property name="text">
                 <string>Video</string>
+               </property>
+               <property name="class" stdset="0">
+                <string>boton</string>
                </property>
               </widget>
              </item>
@@ -119,10 +135,13 @@
                 </size>
                </property>
                <property name="styleSheet">
-                <string notr="true">background-color: #aa00ff;</string>
+                <string notr="true"/>
                </property>
                <property name="text">
                 <string>Podcasts</string>
+               </property>
+               <property name="class" stdset="0">
+                <string>boton</string>
                </property>
               </widget>
              </item>
@@ -141,10 +160,13 @@
                 </size>
                </property>
                <property name="styleSheet">
-                <string notr="true">background-color: #aa00ff;</string>
+                <string notr="true"/>
                </property>
                <property name="text">
                 <string>🔍</string>
+               </property>
+               <property name="class" stdset="0">
+                <string>boton</string>
                </property>
               </widget>
              </item>
@@ -187,7 +209,7 @@
                 </size>
                </property>
                <property name="styleSheet">
-                <string notr="true">background-color: #aa00ff;</string>
+                <string notr="true"/>
                </property>
                <property name="text">
                 <string>Songs</string>
@@ -195,6 +217,9 @@
                <property name="icon">
                 <iconset>
                  <normaloff>../../../../../Downloads/music.png</normaloff>../../../../../Downloads/music.png</iconset>
+               </property>
+               <property name="class" stdset="0">
+                <string>boton</string>
                </property>
               </widget>
              </item>
@@ -213,7 +238,7 @@
                 </size>
                </property>
                <property name="styleSheet">
-                <string notr="true">background-color: #aa00ff;</string>
+                <string notr="true"/>
                </property>
                <property name="text">
                 <string>Playlist</string>
@@ -221,6 +246,9 @@
                <property name="icon">
                 <iconset>
                  <normaloff>../../../../../Downloads/playlist.png</normaloff>../../../../../Downloads/playlist.png</iconset>
+               </property>
+               <property name="class" stdset="0">
+                <string>boton</string>
                </property>
               </widget>
              </item>
@@ -239,7 +267,7 @@
                 </size>
                </property>
                <property name="styleSheet">
-                <string notr="true">background-color: #aa00ff;</string>
+                <string notr="true"/>
                </property>
                <property name="text">
                 <string>Artist</string>
@@ -247,6 +275,9 @@
                <property name="icon">
                 <iconset>
                  <normaloff>../../../../../Downloads/artist.png</normaloff>../../../../../Downloads/artist.png</iconset>
+               </property>
+               <property name="class" stdset="0">
+                <string>boton</string>
                </property>
               </widget>
              </item>
@@ -265,7 +296,7 @@
                 </size>
                </property>
                <property name="styleSheet">
-                <string notr="true">background-color: #aa00ff;</string>
+                <string notr="true"/>
                </property>
                <property name="text">
                 <string>Album</string>
@@ -273,6 +304,9 @@
                <property name="icon">
                 <iconset>
                  <normaloff>../../../../../Downloads/album.png</normaloff>../../../../../Downloads/album.png</iconset>
+               </property>
+               <property name="class" stdset="0">
+                <string>boton</string>
                </property>
               </widget>
              </item>
@@ -334,7 +368,7 @@
                 </size>
                </property>
                <property name="styleSheet">
-                <string notr="true">background-color: #aa00ff;</string>
+                <string notr="true"/>
                </property>
                <property name="text">
                 <string>Aleatorio</string>
@@ -342,6 +376,9 @@
                <property name="icon">
                 <iconset>
                  <normaloff>../../../../../Downloads/repeat.png</normaloff>../../../../../Downloads/repeat.png</iconset>
+               </property>
+               <property name="class" stdset="0">
+                <string>boton</string>
                </property>
               </widget>
              </item>
@@ -353,13 +390,13 @@
             <property name="minimumSize">
              <size>
               <width>1000</width>
-              <height>480</height>
+              <height>450</height>
              </size>
             </property>
             <property name="maximumSize">
              <size>
               <width>1000</width>
-              <height>480</height>
+              <height>450</height>
              </size>
             </property>
             <property name="frameShape">
@@ -461,7 +498,7 @@
                 </size>
                </property>
                <property name="styleSheet">
-                <string notr="true">background-color: #aa00ff;</string>
+                <string notr="true"/>
                </property>
                <property name="text">
                 <string/>
@@ -469,6 +506,9 @@
                <property name="icon">
                 <iconset>
                  <normaloff>../../../../../Downloads/home.png</normaloff>../../../../../Downloads/home.png</iconset>
+               </property>
+               <property name="class" stdset="0">
+                <string>boton</string>
                </property>
               </widget>
              </item>
@@ -487,7 +527,7 @@
                 </size>
                </property>
                <property name="styleSheet">
-                <string notr="true">background-color: #aa00ff;</string>
+                <string notr="true"/>
                </property>
                <property name="text">
                 <string/>
@@ -495,6 +535,9 @@
                <property name="icon">
                 <iconset>
                  <normaloff>../../../../../Downloads/add.png</normaloff>../../../../../Downloads/add.png</iconset>
+               </property>
+               <property name="class" stdset="0">
+                <string>boton</string>
                </property>
               </widget>
              </item>
@@ -513,7 +556,7 @@
                 </size>
                </property>
                <property name="styleSheet">
-                <string notr="true">background-color: #aa00ff;</string>
+                <string notr="true"/>
                </property>
                <property name="text">
                 <string/>
@@ -521,6 +564,9 @@
                <property name="icon">
                 <iconset>
                  <normaloff>../../../../../Downloads/library.png</normaloff>../../../../../Downloads/library.png</iconset>
+               </property>
+               <property name="class" stdset="0">
+                <string>boton</string>
                </property>
               </widget>
              </item>
@@ -539,7 +585,7 @@
                 </size>
                </property>
                <property name="styleSheet">
-                <string notr="true">background-color: #aa00ff;</string>
+                <string notr="true"/>
                </property>
                <property name="text">
                 <string/>
@@ -547,6 +593,9 @@
                <property name="icon">
                 <iconset>
                  <normaloff>../../../../../Downloads/list.png</normaloff>../../../../../Downloads/list.png</iconset>
+               </property>
+               <property name="class" stdset="0">
+                <string>boton</string>
                </property>
               </widget>
              </item>
@@ -565,7 +614,7 @@
                 </size>
                </property>
                <property name="styleSheet">
-                <string notr="true">background-color: #aa00ff;</string>
+                <string notr="true"/>
                </property>
                <property name="text">
                 <string/>
@@ -573,6 +622,9 @@
                <property name="icon">
                 <iconset>
                  <normaloff>../../../../../Downloads/more.png</normaloff>../../../../../Downloads/more.png</iconset>
+               </property>
+               <property name="class" stdset="0">
+                <string>boton</string>
                </property>
               </widget>
              </item>
