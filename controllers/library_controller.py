@@ -7,5 +7,4 @@ class LibraryController:
         self.window.btn_playlist.clicked.connect(self.handle_playlist)
 
     def handle_playlist(self):
-        
         self.window.library_successful.emit()
