@@ -14,7 +14,8 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">.boton{
+   <string notr="true">.fondo{background-color:rgb(209, 204, 255)}
+.boton{
 background-color:rgb(175, 167, 255);
 border-bottom:1px solid rgb(85, 0, 127);
 border-radius:15px;
@@ -22,6 +23,9 @@ border-radius:15px;
 .boton:hover{
 background-color:rgb(133, 121, 252);
 }</string>
+  </property>
+  <property name="class" stdset="0">
+   <string>fondo</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -505,7 +509,7 @@ background-color:rgb(133, 121, 252);
                </property>
                <property name="icon">
                 <iconset>
-                 <normaloff>../../../../../Downloads/home.png</normaloff>../../../../../Downloads/home.png</iconset>
+                 <normaloff>../img/home.png</normaloff>../img/home.png</iconset>
                </property>
                <property name="class" stdset="0">
                 <string>boton</string>
@@ -534,7 +538,7 @@ background-color:rgb(133, 121, 252);
                </property>
                <property name="icon">
                 <iconset>
-                 <normaloff>../../../../../Downloads/add.png</normaloff>../../../../../Downloads/add.png</iconset>
+                 <normaloff>../img/add.png</normaloff>../img/add.png</iconset>
                </property>
                <property name="class" stdset="0">
                 <string>boton</string>
@@ -563,7 +567,7 @@ background-color:rgb(133, 121, 252);
                </property>
                <property name="icon">
                 <iconset>
-                 <normaloff>../../../../../Downloads/library.png</normaloff>../../../../../Downloads/library.png</iconset>
+                 <normaloff>../img/library.png</normaloff>../img/library.png</iconset>
                </property>
                <property name="class" stdset="0">
                 <string>boton</string>
@@ -592,7 +596,7 @@ background-color:rgb(133, 121, 252);
                </property>
                <property name="icon">
                 <iconset>
-                 <normaloff>../../../../../Downloads/list.png</normaloff>../../../../../Downloads/list.png</iconset>
+                 <normaloff>../img/list.png</normaloff>../img/list.png</iconset>
                </property>
                <property name="class" stdset="0">
                 <string>boton</string>
@@ -621,7 +625,7 @@ background-color:rgb(133, 121, 252);
                </property>
                <property name="icon">
                 <iconset>
-                 <normaloff>../../../../../Downloads/more.png</normaloff>../../../../../Downloads/more.png</iconset>
+                 <normaloff>../img/more.png</normaloff>../img/more.png</iconset>
                </property>
                <property name="class" stdset="0">
                 <string>boton</string>
