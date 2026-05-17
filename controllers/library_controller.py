@@ -1,6 +1,7 @@
 from PyQt6 import QtWidgets, uic
 import sys
-from conexion import Conexion
+sys.path.append('.')            
+from controllers.conexion import Conexion 
 
 class LibraryController:
     def __init__(self, window, model):
@@ -16,7 +17,7 @@ class LibraryController:
         self.window.library_successful.emit()
 
     def cargar_canciones(self):
-        # SELECT de la tabla canciones
+
         sql       = "SELECT nombre, artista, album, duracion, genero, likes, favorito FROM canciones"
         resultado = self.conexion.seleccionar(sql)
 

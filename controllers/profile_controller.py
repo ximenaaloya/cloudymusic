@@ -1,3 +1,7 @@
+from PyQt6 import QtWidgets, uic
+import sys
+sys.path.append('.')           
+
 class ProfileController:
     def __init__(self, window, model):
         self.window = window

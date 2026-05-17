@@ -1,4 +1,6 @@
 from PyQt6 import QtWidgets, uic
+import sys
+sys.path.append('.')       
 
 class LoginController:
     def __init__(self, window, model):

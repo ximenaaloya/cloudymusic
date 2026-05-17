@@ -1,6 +1,7 @@
 from PyQt6 import QtWidgets, uic
 import sys
-from conexion import Conexion
+sys.path.append('.')           
+from controllers.conexion import Conexion 
 
 class PlaylistController:
     def __init__(self, window, model):

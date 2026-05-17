@@ -59,7 +59,6 @@ class AppManager:
     def show_main_window(self):
         self.cloudy_profile_window.show()
         self.login_window.close()
-         
     def show_library_window(self):
         self.library_window.show()
         self.cloudy_profile_window.close()

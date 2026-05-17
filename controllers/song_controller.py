@@ -1,6 +1,7 @@
-import sys
 from PyQt6 import QtWidgets, uic
-from conexion import Conexion
+import sys
+sys.path.append('.')            
+from controllers.conexion import Conexion
 
 
 class SongController:
