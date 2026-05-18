@@ -5,6 +5,7 @@ from controllers.playlist_controller import PlaylistController
 from controllers.library_controller import LibraryController
 from controllers.profile_controller import ProfileController
 from controllers.song_controller import SongController
+#from controllers.main_controller import MainController
 from PyQt6.QtCore import Qt, pyqtSignal
 from PyQt6.QtGui import QPalette
 
@@ -41,6 +42,8 @@ class Song(QtWidgets.QMainWindow):
         super().__init__()
         uic.loadUi("./views/song.ui", self)
         self.controller = SongController(self, self)
+
+
 class AppManager:
     def __init__(self):
         self.login_window = Login()
@@ -54,7 +57,7 @@ class AppManager:
         self.cloudy_profile_window.profile_successful.connect(self.show_library_window)
         self.library_window.library_successful.connect(self.show_playlist_window)
         self.playlist_window.playlist_successful.connect(self.show_song_window)
-        self.login_window.show()#cambiar
+        self.cloudy_profile_window.show()#cambiar
         
     def show_main_window(self):
         self.cloudy_profile_window.show()

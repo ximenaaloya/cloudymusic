@@ -522,24 +522,9 @@ background-color: rgb(209, 204, 255);
                     </widget>
                    </item>
                    <item>
-                    <widget class="QComboBox" name="cmb_gen">
-                     <property name="minimumSize">
-                      <size>
-                       <width>0</width>
-                       <height>40</height>
-                      </size>
-                     </property>
-                     <property name="maximumSize">
-                      <size>
-                       <width>16777215</width>
-                       <height>40</height>
-                      </size>
-                     </property>
-                     <property name="cursor">
-                      <cursorShape>PointingHandCursor</cursorShape>
-                     </property>
+                    <widget class="QLineEdit" name="txt_gen">
                      <property name="class" stdset="0">
-                      <string/>
+                      <string>line</string>
                      </property>
                     </widget>
                    </item>

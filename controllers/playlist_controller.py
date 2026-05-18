@@ -11,12 +11,12 @@ class PlaylistController:
         self.conexion = Conexion()
         self.conexion.conectar()
 
-        self.cargar_canciones()
+        #self.cargar_canciones()
 
     def handle_song(self):
         self.window.playlist_successful.emit()
 
-    def cargar_canciones(self):
+    '''def cargar_canciones(self):
         sql       = "SELECT id_cancion, nombre, artista, album, duracion, genero, likes, favorito FROM canciones"
         resultado = self.conexion.seleccionar(sql)
  
@@ -73,4 +73,4 @@ class PlaylistController:
         QtWidgets.QMessageBox.information(self.window, "CloudyMusic", "Canción eliminada correctamente.")
         self.cargar_canciones() 
 
-      
+      '''

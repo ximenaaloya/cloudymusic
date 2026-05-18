@@ -8,25 +8,42 @@ class SongController:
     def __init__(self, window, model):
         self.window = window
         self.model = model
-        self.window.btn_aceptar.clicked.connect(self.add_song)
-        self.conexion = Conexion()
-        self.conexion.conectar()
-
-        self.window.btn_aceptar.clicked.connect(self.mostrar_cancion)
-
-        self.window.btn_agregar.clicked.connect(self.agregar_cancion)
+        self.window.btn_add_song.clicked.connect(self.add_song)
+        #self.conexion = Conexion()
+        #self.conexion.conectar()
 
         
     def add_song(self):
-        name = self.window.txt_name.text()
-        artist = self.window.txt_artist.text()
-        self.window.lbl_name.setText(name)
-        self.window.lbl_artist.setText(artist)
-        song = [name, artist]
-        print(song)
+        self.connection = Conexion()
+        self.connection.conectar()
 
-    def agregar_cancion(self):
-        nombre  = self.window.txt_nombre.text().strip()
+        #id = self.window.txt_id.text()
+        nombre = self.window.txt_name.text()
+        artista = self.window.txt_artist.text()
+        album = self.window.txt_album.text()
+        duracion = self.window.txt_duracion.text()
+        genero = self.window.txt_genero.text()
+        likes = self.window.txt_likes.text()
+        favoritos = self.window.txt_favoritos.text()
+
+        
+        self.window.lbl_name.setText(nombre)
+        self.window.lbl_artist.setText(artista)
+        
+        #.strip borra los espacios de las orillas
+        #id.strip() == "" or 
+        if nombre.strip() == "" or artista.strip() == "" or album.strip() == "" or duracion.strip() == "" or genero.strip() == "" or likes.strip() == "" or favoritos.strip() == "":
+            QtWidgets.QMessageBox.warning(self, "Favor de llenar todos los campos.")
+        else:
+            sql = "INSERT INTO songs VALUES (%s,%s,%s,%s,%s,%s,%s,%s)"
+            values = (0, nombre, artista, album, duracion, genero, likes, favoritos)
+            self.connection.insertar(sql, values)
+            #QtWidgets.QMessageBox.information(self, "Canción registrada correctamente.", None)
+        
+        
+        
+        
+        '''nombre  = self.window.txt_nombre.text().strip()
         artista = self.window.txt_artista.text().strip()
  
         if nombre == "" or artista == "":
@@ -40,5 +57,5 @@ class SongController:
  
         QtWidgets.QMessageBox.information(self.window, "CloudyMusic", f"'{nombre}' agregada correctamente.")
         self.window.txt_nombre.clear()
-        self.window.txt_artista.clear()
+        self.window.txt_artista.clear()'''
  
