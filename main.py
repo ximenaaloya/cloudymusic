@@ -57,7 +57,7 @@ class AppManager:
         self.cloudy_profile_window.profile_successful.connect(self.show_library_window)
         self.library_window.library_successful.connect(self.show_playlist_window)
         self.playlist_window.playlist_successful.connect(self.show_song_window)
-        self.cloudy_profile_window.show()#cambiar
+        self.login_window.show()#cambiar
         
     def show_main_window(self):
         self.cloudy_profile_window.show()

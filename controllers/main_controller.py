@@ -1,4 +1,4 @@
-import sys
+'''import sys
 from PyQt6 import QtWidgets, uic
 from conexion import Conexion
 
@@ -17,11 +17,11 @@ class MainController(QtWidgets.QMainWindow):
         pass_c = self.txt_pass.text()
         #.strip borra los espacios de las orillas
         if name.strip() == "" or last.strip() == "" or email.strip() == "" or password.strip() == "" or pass_c.strip() == "":
-            QtWidgets.QMessageBox.warning(self, "Favor de llenar todos los campos.")
+            QtWidgets.QMessageBox.warning(self.window, "ERROR", "Favor de llenar todos los campos.")
         elif password.strip() != pass_c.strip():
-            QtWidgets.QMessageBox.warning(self, "Las contraseñas no coinciden.")
+            QtWidgets.QMessageBox.warning(self.window, "ERROR", "Las contraseñas no coinciden.")
         else:
             sql = "INSERT INTO users VALUES (%s,%s,%s,%s,%s,%s)"
             values = (0, name, last, email, password, 'default.jpg')
-            self.connection.insertar(sql,values)
-            QtWidgets.QMessageBox.information(self, "Registro insertado correctamente.", None)
+            self.connection.insertar(sql, values)
+            QtWidgets.QMessageBox.information(self, None, "Registro insertado correctamente." )'''

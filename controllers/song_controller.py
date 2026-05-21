@@ -33,12 +33,12 @@ class SongController:
         #.strip borra los espacios de las orillas
         #id.strip() == "" or 
         if nombre.strip() == "" or artista.strip() == "" or album.strip() == "" or duracion.strip() == "" or genero.strip() == "" or likes.strip() == "" or favoritos.strip() == "":
-            QtWidgets.QMessageBox.warning(self, "Favor de llenar todos los campos.")
+            QtWidgets.QMessageBox.warning(self.window, "ERROR", "Favor de llenar todos los campos.")
         else:
             sql = "INSERT INTO songs VALUES (%s,%s,%s,%s,%s,%s,%s,%s)"
             values = (0, nombre, artista, album, duracion, genero, likes, favoritos)
             self.connection.insertar(sql, values)
-            #QtWidgets.QMessageBox.information(self, "Canción registrada correctamente.", None)
+            QtWidgets.QMessageBox.information(self.window, "Registro exitoso", "Canción registrada correctamente.")
         
         
         

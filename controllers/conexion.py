@@ -16,7 +16,6 @@ class Conexion:
     def conectar(self):
             try:
                 self.connection = mariadb.connect(**self.config)
-                print("conectado")
                 self.cursor = self.connection.cursor()
             
             except Error as e:

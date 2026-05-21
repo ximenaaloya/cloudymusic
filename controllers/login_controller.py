@@ -12,6 +12,5 @@ class LoginController:
         password = self.window.txt_pass.text()
         if username == "admin" and password =="123":
             self.window.login_successful.emit()
-            print("Login button clicked")
         else:
-            QtWidgets.QMessageBox.warning(self.window,"Cloudy login","Error")
+            QtWidgets.QMessageBox.warning(self.window, None, "Error")

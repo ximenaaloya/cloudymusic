@@ -12,6 +12,7 @@ class ProfileController:
         self.window.btn_h.clicked.connect(self.change_h)
 
         self.window.btn_aceptar.clicked.connect(self.add_user)
+        #self.window.btn_aceptar.clicked.connect(self.handle_lib)
 
         self.window.btn_name.clicked.connect(self.set_name)
 
@@ -32,11 +33,12 @@ class ProfileController:
         #.strip borra los espacios de las orillas
         #id.strip() == "" or 
         if nombre.strip() == "" or desc.strip() == "" or gen.strip() == "":
-            QtWidgets.QMessageBox.warning(self, "Favor de llenar todos los campos.")
+            QtWidgets.QMessageBox.warning(self.window, "Error", "Favor de llenar todos los campos.")
         else:
             sql = "INSERT INTO perfiles VALUES (%s,%s,%s,%s)"
             values = (0, nombre, desc, gen)
             self.connection.insertar(sql, values)
+            self.window.profile_successful.emit()
 
     def change_m(self):
         ruta = "./img/woman.png"
@@ -63,5 +65,5 @@ class ProfileController:
         self.window.lbl_name.setText(name)
 
 
-    def handle_lib(self):
-        self.window.profile_successful.emit()
+    '''def handle_lib(self):
+        self.window.profile_successful.emit()'''
