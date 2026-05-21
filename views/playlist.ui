@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1257</width>
-    <height>857</height>
+    <height>873</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -81,6 +81,20 @@ background-color:rgb(133, 121, 252);
             </property>
             <layout class="QHBoxLayout" name="horizontalLayout">
              <item>
+              <widget class="QPushButton" name="btn_back">
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset>
+                 <normaloff>../../../../../Downloads/back.png</normaloff>../../../../../Downloads/back.png</iconset>
+               </property>
+               <property name="class" stdset="0">
+                <string>boton</string>
+               </property>
+              </widget>
+             </item>
+             <item>
               <widget class="QLabel" name="label">
                <property name="minimumSize">
                 <size>
@@ -118,6 +132,20 @@ background-color:rgb(133, 121, 252);
                </property>
                <property name="text">
                 <string>TextLabel</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btn_search">
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset>
+                 <normaloff>../../../../../Downloads/search.png</normaloff>../../../../../Downloads/search.png</iconset>
+               </property>
+               <property name="class" stdset="0">
+                <string>boton</string>
                </property>
               </widget>
              </item>

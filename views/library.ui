@@ -488,7 +488,7 @@ background-color:rgb(133, 121, 252);
             </property>
             <layout class="QHBoxLayout" name="horizontalLayout_8">
              <item>
-              <widget class="QPushButton" name="pushButton_32">
+              <widget class="QPushButton" name="btn_back">
                <property name="minimumSize">
                 <size>
                  <width>100</width>
@@ -509,7 +509,7 @@ background-color:rgb(133, 121, 252);
                </property>
                <property name="icon">
                 <iconset>
-                 <normaloff>../img/home.png</normaloff>../img/home.png</iconset>
+                 <normaloff>../../../../../Downloads/back.png</normaloff>../../../../../Downloads/back.png</iconset>
                </property>
                <property name="class" stdset="0">
                 <string>boton</string>

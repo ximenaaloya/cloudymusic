@@ -76,6 +76,20 @@ height:40px;
            </property>
            <layout class="QHBoxLayout" name="horizontalLayout_6">
             <item>
+             <widget class="QPushButton" name="btn_back">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normaloff>../../../../../Downloads/back.png</normaloff>../../../../../Downloads/back.png</iconset>
+              </property>
+              <property name="class" stdset="0">
+               <string>boton</string>
+              </property>
+             </widget>
+            </item>
+            <item>
              <spacer name="horizontalSpacer_3">
               <property name="orientation">
                <enum>Qt::Horizontal</enum>
