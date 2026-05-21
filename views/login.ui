@@ -106,6 +106,12 @@ background-color:rgb(3, 2, 7);
                   <height>40</height>
                  </size>
                 </property>
+                <property name="whatsThis">
+                 <string/>
+                </property>
+                <property name="placeholderText">
+                 <string>admin</string>
+                </property>
                 <property name="class" stdset="0">
                  <string>line</string>
                 </property>
@@ -139,6 +145,9 @@ background-color:rgb(3, 2, 7);
                   <width>16777215</width>
                   <height>40</height>
                  </size>
+                </property>
+                <property name="placeholderText">
+                 <string>123</string>
                 </property>
                 <property name="class" stdset="0">
                  <string>line</string>

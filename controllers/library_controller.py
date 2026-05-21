@@ -11,12 +11,12 @@ class LibraryController:
         self.conexion = Conexion()
         self.conexion.conectar()
 
-        self.cargar_canciones()
+        #self.cargar_canciones()
 
     def handle_playlist(self):
         self.window.library_successful.emit()
 
-    def cargar_canciones(self):
+    '''def cargar_canciones(self):
 
         sql       = "SELECT nombre, artista, album, duracion, genero, likes, favorito FROM canciones"
         resultado = self.conexion.seleccionar(sql)
@@ -36,5 +36,5 @@ class LibraryController:
             tabla.setItem(i, 4, QtWidgets.QTableWidgetItem(duracion or ""))
             tabla.setItem(i, 5, QtWidgets.QTableWidgetItem(genero   or ""))
             tabla.setItem(i, 6, QtWidgets.QTableWidgetItem(str(likes or 0)))
-            tabla.setItem(i, 7, QtWidgets.QTableWidgetItem("Sí" if favorito else "No"))
+            tabla.setItem(i, 7, QtWidgets.QTableWidgetItem("Sí" if favorito else "No"))'''
         

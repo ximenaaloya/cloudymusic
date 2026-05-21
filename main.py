@@ -5,6 +5,7 @@ from controllers.playlist_controller import PlaylistController
 from controllers.library_controller import LibraryController
 from controllers.profile_controller import ProfileController
 from controllers.song_controller import SongController
+#from controllers.main_controller import MainController
 from PyQt6.QtCore import Qt, pyqtSignal
 from PyQt6.QtGui import QPalette
 
@@ -41,6 +42,8 @@ class Song(QtWidgets.QMainWindow):
         super().__init__()
         uic.loadUi("./views/song.ui", self)
         self.controller = SongController(self, self)
+
+
 class AppManager:
     def __init__(self):
         self.login_window = Login()
