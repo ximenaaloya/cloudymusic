@@ -1,6 +1,6 @@
 from PyQt6 import QtWidgets, uic
 import sys
-sys.path.append('.')            
+from PyQt6.QtWidgets import QTableWidgetItem
 from controllers.conexion import Conexion
 
 
@@ -9,6 +9,7 @@ class SongController:
         self.window = window
         self.model = model
         self.window.btn_add_song.clicked.connect(self.add_song)
+        self.window.btn_modificar.clicked.connect(self.modificar_song)
         #self.conexion = Conexion()
         #self.conexion.conectar()
 
@@ -27,8 +28,8 @@ class SongController:
         favoritos = self.window.txt_favoritos.text()
 
         
-        self.window.lbl_name.setText(nombre)
-        self.window.lbl_artist.setText(artista)
+        '''self.window.lbl_name.setText(nombre)
+        self.window.lbl_artist.setText(artista)'''
         
         #.strip borra los espacios de las orillas
         #id.strip() == "" or 
@@ -39,11 +40,27 @@ class SongController:
             values = (0, nombre, artista, album, duracion, genero, likes, favoritos)
             self.connection.insertar(sql, values)
             QtWidgets.QMessageBox.information(self.window, "Registro exitoso", "Canción registrada correctamente.")
+
+            row_position = self.window.table.rowCount()
+            self.window.table.insertRow(row_position)
+
+            self.window.table.setItem(row_position, 0, QtWidgets.QTableWidgetItem(str(nombre)))
+            self.window.table.setItem(row_position, 1, QtWidgets.QTableWidgetItem(str(artista)))
+            self.window.table.setItem(row_position, 2, QtWidgets.QTableWidgetItem(str(album)))
+            self.window.table.setItem(row_position, 3, QtWidgets.QTableWidgetItem(str(duracion)))
+            self.window.table.setItem(row_position, 4, QtWidgets.QTableWidgetItem(str(genero)))
+            self.window.table.setItem(row_position, 5, QtWidgets.QTableWidgetItem(str(likes)))
+            self.window.table.setItem(row_position, 6, QtWidgets.QTableWidgetItem(str(favoritos)))
+
+    def modificar_song(self):
+            self.window.song_succesful.emit()
+            
+            
+            '''dato = QTableWidgetItem(str(nombre))
+            self.window.table.setItem(0, 0, dato)'''
+
         
-        
-        
-        
-        '''nombre  = self.window.txt_nombre.text().strip()
+    '''nombre  = self.window.txt_nombre.text().strip()
         artista = self.window.txt_artista.text().strip()
  
         if nombre == "" or artista == "":

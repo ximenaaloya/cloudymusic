@@ -28,24 +28,11 @@ background-color:rgb(133, 121, 252);
    <string>fondo</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLineEdit" name="lineEdit">
+   <widget class="QLineEdit" name="txt_delete">
     <property name="geometry">
      <rect>
-      <x>130</x>
-      <y>80</y>
-      <width>511</width>
-      <height>22</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="lineEdit_2">
-    <property name="geometry">
-     <rect>
-      <x>130</x>
-      <y>150</y>
+      <x>140</x>
+      <y>130</y>
       <width>511</width>
       <height>22</height>
      </rect>
@@ -57,8 +44,8 @@ background-color:rgb(133, 121, 252);
    <widget class="QPushButton" name="btn_delete">
     <property name="geometry">
      <rect>
-      <x>150</x>
-      <y>200</y>
+      <x>340</x>
+      <y>180</y>
       <width>93</width>
       <height>28</height>
      </rect>
@@ -74,50 +61,17 @@ background-color:rgb(133, 121, 252);
      <string>boton</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="btn_edit">
-    <property name="geometry">
-     <rect>
-      <x>530</x>
-      <y>200</y>
-      <width>93</width>
-      <height>28</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="icon">
-     <iconset>
-      <normaloff>../../../../../Downloads/edit.png</normaloff>../../../../../Downloads/edit.png</iconset>
-    </property>
-    <property name="class" stdset="0">
-     <string>boton</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>140</x>
-      <y>50</y>
-      <width>141</width>
+      <x>150</x>
+      <y>100</y>
+      <width>241</width>
       <height>16</height>
      </rect>
     </property>
     <property name="text">
-     <string>Nombre de la canción:</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_2">
-    <property name="geometry">
-     <rect>
-      <x>140</x>
-      <y>120</y>
-      <width>141</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Nombre del artista:</string>
+     <string>Nombre de la canción a eliminar:</string>
     </property>
    </widget>
    <widget class="QPushButton" name="btn_back">

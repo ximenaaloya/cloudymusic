@@ -210,18 +210,13 @@ background-color:rgb(133, 121, 252);
             </property>
             <layout class="QVBoxLayout" name="verticalLayout_3">
              <item>
-              <widget class="QTableWidget" name="tableWidget">
+              <widget class="QTableWidget" name="table_songs">
                <property name="minimumSize">
                 <size>
                  <width>800</width>
                  <height>0</height>
                 </size>
                </property>
-               <column>
-                <property name="text">
-                 <string>Imagen</string>
-                </property>
-               </column>
                <column>
                 <property name="text">
                  <string>Canción</string>
