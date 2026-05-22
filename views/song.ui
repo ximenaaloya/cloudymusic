@@ -540,6 +540,13 @@ height:40px;
                   <property name="text">
                    <string/>
                   </property>
+                  <property name="icon">
+                   <iconset>
+                    <normaloff>../../../../../Downloads/edit.png</normaloff>../../../../../Downloads/edit.png</iconset>
+                  </property>
+                  <property name="class" stdset="0">
+                   <string>boton</string>
+                  </property>
                  </widget>
                 </item>
                 <item>
@@ -558,6 +565,13 @@ height:40px;
                   </property>
                   <property name="text">
                    <string/>
+                  </property>
+                  <property name="icon">
+                   <iconset>
+                    <normaloff>../../../../../Downloads/delete.png</normaloff>../../../../../Downloads/delete.png</iconset>
+                  </property>
+                  <property name="class" stdset="0">
+                   <string>boton</string>
                   </property>
                  </widget>
                 </item>

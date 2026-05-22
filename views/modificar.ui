@@ -13,6 +13,17 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">.fondo{background-color:rgb(209, 204, 255)}
+.boton{
+background-color:rgb(175, 167, 255);
+border-bottom:1px solid rgb(85, 0, 127);
+border-radius:15px;
+}
+.boton:hover{
+background-color:rgb(133, 121, 252);
+}</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QPushButton" name="btn_back">
     <property name="geometry">
@@ -26,6 +37,13 @@
     <property name="text">
      <string/>
     </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../../../../../Downloads/back.png</normaloff>../../../../../Downloads/back.png</iconset>
+    </property>
+    <property name="class" stdset="0">
+     <string>boton</string>
+    </property>
    </widget>
    <widget class="QPushButton" name="btn_mod">
     <property name="geometry">
@@ -38,6 +56,9 @@
     </property>
     <property name="text">
      <string>Modificar</string>
+    </property>
+    <property name="class" stdset="0">
+     <string>boton</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit_2">
@@ -156,6 +177,9 @@
     </property>
     <property name="text">
      <string>Aceptar</string>
+    </property>
+    <property name="class" stdset="0">
+     <string>boton</string>
     </property>
    </widget>
   </widget>
