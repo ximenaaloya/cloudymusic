@@ -12,9 +12,25 @@ class SongController:
         self.window.btn_modificar.clicked.connect(self.modificar_song)
         self.window.btn_mod.clicked.connect(self.mod_song)
         self.window.btn_back.clicked.connect(self.back_song)
-        #self.window.btn_back.clicked.connect(self.back)
-        #self.conexion = Conexion()
-        #self.conexion.conectar()
+        self.cargar_canciones()
+        
+    def act_tabla(self):
+        self.cargar_canciones()
+
+    def cargar_canciones(self):
+        self.connection = Conexion()
+        self.connection.conectar()
+        self.window.table.setRowCount(0)
+
+        sql = "SELECT nombre, artista, album, duracion, genero, likes, favorito FROM songs"
+        canciones = self.connection.seleccionar(sql)
+
+        if canciones:
+            for row_n, row_d in enumerate(canciones):
+                self.window.table.insertRow(row_n)
+                for column_n, data in enumerate(row_d):
+                    self.window.table.setItem(row_n, column_n, QTableWidgetItem(str(data)))
+
 
         
     def add_song(self):
@@ -31,9 +47,6 @@ class SongController:
         favoritos = self.window.txt_favoritos.text()
 
         
-        '''self.window.lbl_name.setText(nombre)
-        self.window.lbl_artist.setText(artista)'''
-        
         #.strip borra los espacios de las orillas
         #id.strip() == "" or 
         if nombre.strip() == "" or artista.strip() == "" or album.strip() == "" or duracion.strip() == "" or genero.strip() == "" or likes.strip() == "" or favoritos.strip() == "":
@@ -43,17 +56,17 @@ class SongController:
             values = (0, nombre, artista, album, duracion, genero, likes, favoritos)
             self.connection.insertar(sql, values)
             QtWidgets.QMessageBox.information(self.window, "Registro exitoso", "Canción registrada correctamente.")
+            self.cargar_canciones()
+            self.window.agregar_song.emit()#
 
-            row_position = self.window.table.rowCount()
-            self.window.table.insertRow(row_position)
-
-            self.window.table.setItem(row_position, 0, QtWidgets.QTableWidgetItem(str(nombre)))
-            self.window.table.setItem(row_position, 1, QtWidgets.QTableWidgetItem(str(artista)))
-            self.window.table.setItem(row_position, 2, QtWidgets.QTableWidgetItem(str(album)))
-            self.window.table.setItem(row_position, 3, QtWidgets.QTableWidgetItem(str(duracion)))
-            self.window.table.setItem(row_position, 4, QtWidgets.QTableWidgetItem(str(genero)))
-            self.window.table.setItem(row_position, 5, QtWidgets.QTableWidgetItem(str(likes)))
-            self.window.table.setItem(row_position, 6, QtWidgets.QTableWidgetItem(str(favoritos)))
+            
+            self.window.txt_name.clear()
+            self.window.txt_artist.clear()
+            self.window.txt_album.clear()
+            self.window.txt_duracion.clear()
+            self.window.txt_genero.clear()
+            self.window.txt_likes.clear()
+            self.window.txt_favoritos.clear()
 
     def modificar_song(self):
         self.window.song_succesful.emit()

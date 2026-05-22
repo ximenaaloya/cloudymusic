@@ -1,4 +1,5 @@
 from PyQt6 import QtWidgets, uic
+
 import sys     
 from controllers.conexion import Conexion 
 
@@ -21,5 +22,7 @@ class DeleteController:
             values = (cancion,)
             self.connection.insertar(sql, values)
             QtWidgets.QMessageBox.information(self.window, None, "Canción eliminada correctamente.")
+            self.window.txt_delete.clear()
+            self.window.cancion_eliminada.emit()
     def back_delete(self):
         self.window.delete_successful.emit()

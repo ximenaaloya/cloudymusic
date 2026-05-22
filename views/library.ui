@@ -134,7 +134,7 @@ background-color:rgb(133, 121, 252);
             </property>
             <layout class="QHBoxLayout" name="horizontalLayout">
              <item>
-              <widget class="QTableWidget" name="tableWidget">
+              <widget class="QTableWidget" name="table_L">
                <property name="minimumSize">
                 <size>
                  <width>0</width>

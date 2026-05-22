@@ -1,7 +1,7 @@
 from PyQt6 import QtWidgets, uic
-import sys
-sys.path.append('.')            
+import sys         
 from controllers.conexion import Conexion 
+from PyQt6.QtWidgets import QTableWidgetItem
 
 class LibraryController:
     def __init__(self, window, model):
@@ -12,8 +12,25 @@ class LibraryController:
         
         self.conexion = Conexion()
         self.conexion.conectar()
+        self.cargar_canciones()
+        
+    def act_tabla(self):
+        self.cargar_canciones()
 
-        #self.cargar_canciones()
+    def cargar_canciones(self):
+        self.connection = Conexion()
+        self.connection.conectar()
+        self.window.table_L.setRowCount(0)
+
+        sql = "SELECT nombre, artista, album, duracion, genero, likes, favorito FROM songs"
+        canciones = self.connection.seleccionar(sql)
+
+        if canciones:
+            for row_n, row_d in enumerate(canciones):
+                self.window.table_L.insertRow(row_n)
+                for column_n, data in enumerate(row_d):
+                    self.window.table_L.setItem(row_n, column_n, QTableWidgetItem(str(data)))
+
 
     def handle_playlist(self):
         self.window.library_successful.emit()

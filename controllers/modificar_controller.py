@@ -8,7 +8,6 @@ class ModificarController:
     def __init__(self, window, model):
         self.window = window
         self.model = model
-        
 
         self.window.btn_mod.hide()
         self.window.lbl_n.hide()
@@ -93,3 +92,12 @@ class ModificarController:
             self.conexion.insertar(sql, values)
             self.name = name
             QtWidgets.QMessageBox.warning(self.window, None, "Canción modificada correctamente.")
+            self.window.txt_nombre.clear()
+            self.window.txt_artista.clear()
+            self.window.txt_album.clear()
+            self.window.txt_duracion.clear()
+            self.window.txt_genero.clear()
+            self.window.txt_likes.clear()
+            self.window.txt_favoritos.clear()
+            self.window.txt_song.clear()
+            self.window.modifi_song.emit()

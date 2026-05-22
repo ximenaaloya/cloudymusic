@@ -725,7 +725,7 @@ background-color: rgb(209, 204, 255);
                              </font>
                             </property>
                             <property name="text">
-                             <string>Choose name color</string>
+                             <string/>
                             </property>
                            </widget>
                           </item>
@@ -876,6 +876,31 @@ border-right:1px solid rgb(50, 148, 1);</string>
                 <property name="frameShadow">
                  <enum>QFrame::Raised</enum>
                 </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_21">
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_20">
+                   <item>
+                    <widget class="QTableWidget" name="table">
+                     <column>
+                      <property name="text">
+                       <string>Nombre</string>
+                      </property>
+                     </column>
+                     <column>
+                      <property name="text">
+                       <string>Descripcion</string>
+                      </property>
+                     </column>
+                     <column>
+                      <property name="text">
+                       <string>Genero</string>
+                      </property>
+                     </column>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
                </widget>
               </item>
               <item>

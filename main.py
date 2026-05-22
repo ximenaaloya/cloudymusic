@@ -44,18 +44,21 @@ class Song(QtWidgets.QMainWindow):
     song_succesful = pyqtSignal()
     modificar_successful = pyqtSignal()
     back_song_successful = pyqtSignal()
+    agregar_song = pyqtSignal()
     def __init__(self):
         super().__init__()
         uic.loadUi("./views/song.ui", self)
         self.controller = SongController(self, self)
 class Delete(QtWidgets.QMainWindow):
     delete_successful = pyqtSignal()
+    cancion_eliminada = pyqtSignal()
     def __init__(self):
         super().__init__()
         uic.loadUi("./views/delete.ui", self)
         self.controller = DeleteController(self, self)
 class Modificar(QtWidgets.QMainWindow):
     modificar_successful = pyqtSignal()
+    #
     def __init__(self):
         super().__init__()
         uic.loadUi("./views/modificar.ui", self)
@@ -83,7 +86,12 @@ class AppManager:
         self.library_window.add_song_successful.connect(self.add_song)
         self.song_window.back_song_successful.connect(self.back_song)
         self.delete_window.delete_successful.connect(self.back_delete)
-        self.modificar_window.show()#cambiar
+
+        self.delete_window.cancion_eliminada.connect(self.song_window.controller.act_tabla)
+        self.song_window.agregar_song.connect(self.library_window.controller.act_tabla)
+        self.delete_window.cancion_eliminada.connect(self.library_window.controller.act_tabla)
+        #self.modificar_window.cancion_eliminada.connect(self.song_window.controller.eliminar_cancion)
+        self.delete_window.show()#cambiar
         
     def show_main_window(self):
         self.cloudy_profile_window.show()
