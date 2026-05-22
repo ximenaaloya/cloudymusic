@@ -73,248 +73,7 @@ background-color:rgb(133, 121, 252);
             <property name="frameShadow">
              <enum>QFrame::Raised</enum>
             </property>
-            <layout class="QHBoxLayout" name="horizontalLayout_5">
-             <item>
-              <widget class="QPushButton" name="pushButton_14">
-               <property name="minimumSize">
-                <size>
-                 <width>100</width>
-                 <height>0</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>100</width>
-                 <height>16777215</height>
-                </size>
-               </property>
-               <property name="styleSheet">
-                <string notr="true"/>
-               </property>
-               <property name="text">
-                <string>Music</string>
-               </property>
-               <property name="class" stdset="0">
-                <string>boton</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QPushButton" name="pushButton_20">
-               <property name="minimumSize">
-                <size>
-                 <width>100</width>
-                 <height>0</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>100</width>
-                 <height>16777215</height>
-                </size>
-               </property>
-               <property name="styleSheet">
-                <string notr="true"/>
-               </property>
-               <property name="text">
-                <string>Video</string>
-               </property>
-               <property name="class" stdset="0">
-                <string>boton</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QPushButton" name="pushButton_21">
-               <property name="minimumSize">
-                <size>
-                 <width>100</width>
-                 <height>0</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>100</width>
-                 <height>16777215</height>
-                </size>
-               </property>
-               <property name="styleSheet">
-                <string notr="true"/>
-               </property>
-               <property name="text">
-                <string>Podcasts</string>
-               </property>
-               <property name="class" stdset="0">
-                <string>boton</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QPushButton" name="pushButton_22">
-               <property name="minimumSize">
-                <size>
-                 <width>50</width>
-                 <height>0</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>50</width>
-                 <height>16777215</height>
-                </size>
-               </property>
-               <property name="styleSheet">
-                <string notr="true"/>
-               </property>
-               <property name="text">
-                <string>🔍</string>
-               </property>
-               <property name="class" stdset="0">
-                <string>boton</string>
-               </property>
-              </widget>
-             </item>
-            </layout>
-           </widget>
-          </item>
-          <item>
-           <widget class="QFrame" name="frame_8">
-            <property name="minimumSize">
-             <size>
-              <width>1000</width>
-              <height>100</height>
-             </size>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>1000</width>
-              <height>100</height>
-             </size>
-            </property>
-            <property name="frameShape">
-             <enum>QFrame::StyledPanel</enum>
-            </property>
-            <property name="frameShadow">
-             <enum>QFrame::Raised</enum>
-            </property>
-            <layout class="QHBoxLayout" name="horizontalLayout_6">
-             <item>
-              <widget class="QPushButton" name="pushButton_23">
-               <property name="minimumSize">
-                <size>
-                 <width>80</width>
-                 <height>80</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>80</width>
-                 <height>80</height>
-                </size>
-               </property>
-               <property name="styleSheet">
-                <string notr="true"/>
-               </property>
-               <property name="text">
-                <string>Songs</string>
-               </property>
-               <property name="icon">
-                <iconset>
-                 <normaloff>../../../../../Downloads/music.png</normaloff>../../../../../Downloads/music.png</iconset>
-               </property>
-               <property name="class" stdset="0">
-                <string>boton</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QPushButton" name="btn_playlist">
-               <property name="minimumSize">
-                <size>
-                 <width>80</width>
-                 <height>80</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>80</width>
-                 <height>80</height>
-                </size>
-               </property>
-               <property name="styleSheet">
-                <string notr="true"/>
-               </property>
-               <property name="text">
-                <string>Playlist</string>
-               </property>
-               <property name="icon">
-                <iconset>
-                 <normaloff>../../../../../Downloads/playlist.png</normaloff>../../../../../Downloads/playlist.png</iconset>
-               </property>
-               <property name="class" stdset="0">
-                <string>boton</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QPushButton" name="pushButton_25">
-               <property name="minimumSize">
-                <size>
-                 <width>80</width>
-                 <height>80</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>80</width>
-                 <height>80</height>
-                </size>
-               </property>
-               <property name="styleSheet">
-                <string notr="true"/>
-               </property>
-               <property name="text">
-                <string>Artist</string>
-               </property>
-               <property name="icon">
-                <iconset>
-                 <normaloff>../../../../../Downloads/artist.png</normaloff>../../../../../Downloads/artist.png</iconset>
-               </property>
-               <property name="class" stdset="0">
-                <string>boton</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QPushButton" name="pushButton_26">
-               <property name="minimumSize">
-                <size>
-                 <width>80</width>
-                 <height>80</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>80</width>
-                 <height>80</height>
-                </size>
-               </property>
-               <property name="styleSheet">
-                <string notr="true"/>
-               </property>
-               <property name="text">
-                <string>Album</string>
-               </property>
-               <property name="icon">
-                <iconset>
-                 <normaloff>../../../../../Downloads/album.png</normaloff>../../../../../Downloads/album.png</iconset>
-               </property>
-               <property name="class" stdset="0">
-                <string>boton</string>
-               </property>
-              </widget>
-             </item>
-            </layout>
+            <layout class="QHBoxLayout" name="horizontalLayout_5"/>
            </widget>
           </item>
           <item>
@@ -339,50 +98,14 @@ background-color:rgb(133, 121, 252);
             </property>
             <layout class="QHBoxLayout" name="horizontalLayout_7">
              <item>
-              <widget class="QLineEdit" name="lineEdit_2">
-               <property name="minimumSize">
-                <size>
-                 <width>300</width>
-                 <height>25</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>300</width>
-                 <height>25</height>
-                </size>
-               </property>
-               <property name="inputMask">
-                <string>🔍</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QPushButton" name="pushButton_27">
-               <property name="minimumSize">
-                <size>
-                 <width>100</width>
-                 <height>25</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>100</width>
-                 <height>25</height>
-                </size>
-               </property>
-               <property name="styleSheet">
-                <string notr="true"/>
+              <widget class="QLabel" name="label">
+               <property name="font">
+                <font>
+                 <pointsize>15</pointsize>
+                </font>
                </property>
                <property name="text">
-                <string>Aleatorio</string>
-               </property>
-               <property name="icon">
-                <iconset>
-                 <normaloff>../../../../../Downloads/repeat.png</normaloff>../../../../../Downloads/repeat.png</iconset>
-               </property>
-               <property name="class" stdset="0">
-                <string>boton</string>
+                <string>Canciones</string>
                </property>
               </widget>
              </item>
@@ -423,12 +146,7 @@ background-color:rgb(133, 121, 252);
                </property>
                <column>
                 <property name="text">
-                 <string>Imagen</string>
-                </property>
-               </column>
-               <column>
-                <property name="text">
-                 <string>Canción</string>
+                 <string>Nombre</string>
                 </property>
                </column>
                <column>
@@ -470,8 +188,8 @@ background-color:rgb(133, 121, 252);
            <widget class="QFrame" name="frame_11">
             <property name="minimumSize">
              <size>
-              <width>1000</width>
-              <height>80</height>
+              <width>100</width>
+              <height>100</height>
              </size>
             </property>
             <property name="maximumSize">
@@ -488,17 +206,17 @@ background-color:rgb(133, 121, 252);
             </property>
             <layout class="QHBoxLayout" name="horizontalLayout_8">
              <item>
-              <widget class="QPushButton" name="btn_back">
+              <widget class="QPushButton" name="btn_add">
                <property name="minimumSize">
                 <size>
-                 <width>100</width>
-                 <height>50</height>
+                 <width>80</width>
+                 <height>80</height>
                 </size>
                </property>
                <property name="maximumSize">
                 <size>
-                 <width>100</width>
-                 <height>50</height>
+                 <width>80</width>
+                 <height>80</height>
                 </size>
                </property>
                <property name="styleSheet">
@@ -509,123 +227,7 @@ background-color:rgb(133, 121, 252);
                </property>
                <property name="icon">
                 <iconset>
-                 <normaloff>../../../../../Downloads/back.png</normaloff>../../../../../Downloads/back.png</iconset>
-               </property>
-               <property name="class" stdset="0">
-                <string>boton</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QPushButton" name="pushButton_33">
-               <property name="minimumSize">
-                <size>
-                 <width>100</width>
-                 <height>50</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>100</width>
-                 <height>50</height>
-                </size>
-               </property>
-               <property name="styleSheet">
-                <string notr="true"/>
-               </property>
-               <property name="text">
-                <string/>
-               </property>
-               <property name="icon">
-                <iconset>
-                 <normaloff>../img/add.png</normaloff>../img/add.png</iconset>
-               </property>
-               <property name="class" stdset="0">
-                <string>boton</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QPushButton" name="pushButton_34">
-               <property name="minimumSize">
-                <size>
-                 <width>100</width>
-                 <height>50</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>100</width>
-                 <height>50</height>
-                </size>
-               </property>
-               <property name="styleSheet">
-                <string notr="true"/>
-               </property>
-               <property name="text">
-                <string/>
-               </property>
-               <property name="icon">
-                <iconset>
-                 <normaloff>../img/library.png</normaloff>../img/library.png</iconset>
-               </property>
-               <property name="class" stdset="0">
-                <string>boton</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QPushButton" name="pushButton_35">
-               <property name="minimumSize">
-                <size>
-                 <width>100</width>
-                 <height>50</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>100</width>
-                 <height>50</height>
-                </size>
-               </property>
-               <property name="styleSheet">
-                <string notr="true"/>
-               </property>
-               <property name="text">
-                <string/>
-               </property>
-               <property name="icon">
-                <iconset>
-                 <normaloff>../img/list.png</normaloff>../img/list.png</iconset>
-               </property>
-               <property name="class" stdset="0">
-                <string>boton</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QPushButton" name="pushButton_36">
-               <property name="minimumSize">
-                <size>
-                 <width>100</width>
-                 <height>50</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>100</width>
-                 <height>50</height>
-                </size>
-               </property>
-               <property name="styleSheet">
-                <string notr="true"/>
-               </property>
-               <property name="text">
-                <string/>
-               </property>
-               <property name="icon">
-                <iconset>
-                 <normaloff>../img/more.png</normaloff>../img/more.png</iconset>
+                 <normaloff>../img/music_more.png</normaloff>../img/music_more.png</iconset>
                </property>
                <property name="class" stdset="0">
                 <string>boton</string>

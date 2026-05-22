@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1239</width>
-    <height>847</height>
+    <height>881</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -77,12 +77,18 @@ height:40px;
            <layout class="QHBoxLayout" name="horizontalLayout_6">
             <item>
              <widget class="QPushButton" name="btn_back">
+              <property name="minimumSize">
+               <size>
+                <width>70</width>
+                <height>25</height>
+               </size>
+              </property>
               <property name="text">
                <string/>
               </property>
               <property name="icon">
                <iconset>
-                <normaloff>../../../../../Downloads/back.png</normaloff>../../../../../Downloads/back.png</iconset>
+                <normaloff>../img/arrow.png</normaloff>../img/arrow.png</iconset>
               </property>
               <property name="class" stdset="0">
                <string>boton</string>
@@ -158,6 +164,18 @@ height:40px;
             <property name="spacing">
              <number>7</number>
             </property>
+            <item>
+             <widget class="QLabel" name="label">
+              <property name="font">
+               <font>
+                <pointsize>13</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Agregar canción</string>
+              </property>
+             </widget>
+            </item>
             <item>
              <widget class="QLabel" name="label_5">
               <property name="sizePolicy">
@@ -542,7 +560,7 @@ height:40px;
                   </property>
                   <property name="icon">
                    <iconset>
-                    <normaloff>../../../../../Downloads/edit.png</normaloff>../../../../../Downloads/edit.png</iconset>
+                    <normaloff>../img/edit.png</normaloff>../img/edit.png</iconset>
                   </property>
                   <property name="class" stdset="0">
                    <string>boton</string>
@@ -568,7 +586,7 @@ height:40px;
                   </property>
                   <property name="icon">
                    <iconset>
-                    <normaloff>../../../../../Downloads/delete.png</normaloff>../../../../../Downloads/delete.png</iconset>
+                    <normaloff>../img/delete.png</normaloff>../img/delete.png</iconset>
                   </property>
                   <property name="class" stdset="0">
                    <string>boton</string>

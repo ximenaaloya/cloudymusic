@@ -10,6 +10,9 @@ class SongController:
         self.model = model
         self.window.btn_add_song.clicked.connect(self.add_song)
         self.window.btn_modificar.clicked.connect(self.modificar_song)
+        self.window.btn_mod.clicked.connect(self.mod_song)
+        self.window.btn_back.clicked.connect(self.back_song)
+        #self.window.btn_back.clicked.connect(self.back)
         #self.conexion = Conexion()
         #self.conexion.conectar()
 
@@ -53,26 +56,12 @@ class SongController:
             self.window.table.setItem(row_position, 6, QtWidgets.QTableWidgetItem(str(favoritos)))
 
     def modificar_song(self):
-            self.window.song_succesful.emit()
-            
-            
-            '''dato = QTableWidgetItem(str(nombre))
-            self.window.table.setItem(0, 0, dato)'''
-
+        self.window.song_succesful.emit()
         
-    '''nombre  = self.window.txt_nombre.text().strip()
-        artista = self.window.txt_artista.text().strip()
- 
-        if nombre == "" or artista == "":
-            QtWidgets.QMessageBox.warning(self.window, "CloudyMusic", "Llena los campos Nombre y Artista.")
-            return
- 
+    def mod_song(self):
+        self.window.modificar_successful.emit()
+    
+    def back_song(self):
+        self.window.back_song_successful.emit()
 
-        sql    = "INSERT INTO canciones (nombre, artista) VALUES (%s, %s)"
-        valores = (nombre, artista)
-        self.conexion.insertar(sql, valores)
- 
-        QtWidgets.QMessageBox.information(self.window, "CloudyMusic", f"'{nombre}' agregada correctamente.")
-        self.window.txt_nombre.clear()
-        self.window.txt_artista.clear()'''
- 
+    

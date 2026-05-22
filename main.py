@@ -6,6 +6,7 @@ from controllers.library_controller import LibraryController
 from controllers.profile_controller import ProfileController
 from controllers.song_controller import SongController
 from controllers.delete_controller import DeleteController
+from controllers.modificar_controller import ModificarController
 
 #from controllers.main_controller import MainController
 from PyQt6.QtCore import Qt, pyqtSignal
@@ -20,6 +21,7 @@ class Login(QtWidgets.QMainWindow):
 
 class Library(QtWidgets.QMainWindow):
     library_successful = pyqtSignal()
+    add_song_successful = pyqtSignal()
     def __init__(self):
         super().__init__()
         uic.loadUi("./views/library.ui", self)
@@ -40,16 +42,24 @@ class Playlist(QtWidgets.QMainWindow):
         self.controller = PlaylistController(self, self)
 class Song(QtWidgets.QMainWindow):
     song_succesful = pyqtSignal()
+    modificar_successful = pyqtSignal()
+    back_song_successful = pyqtSignal()
     def __init__(self):
         super().__init__()
         uic.loadUi("./views/song.ui", self)
         self.controller = SongController(self, self)
 class Delete(QtWidgets.QMainWindow):
-    song_succesful = pyqtSignal()
+    delete_successful = pyqtSignal()
     def __init__(self):
         super().__init__()
         uic.loadUi("./views/delete.ui", self)
         self.controller = DeleteController(self, self)
+class Modificar(QtWidgets.QMainWindow):
+    modificar_successful = pyqtSignal()
+    def __init__(self):
+        super().__init__()
+        uic.loadUi("./views/modificar.ui", self)
+        self.controller = ModificarController(self, self)
 
 
 class AppManager:
@@ -60,6 +70,7 @@ class AppManager:
         self.playlist_window= Playlist()
         self.song_window= Song()
         self.delete_window = Delete()
+        self.modificar_window = Modificar()
 
         #dar de alta las seniales
         self.login_window.login_successful.connect(self.show_main_window)
@@ -67,7 +78,12 @@ class AppManager:
         self.library_window.library_successful.connect(self.show_playlist_window)
         self.playlist_window.playlist_successful.connect(self.show_song_window)
         self.song_window.song_succesful.connect(self.show_delete_window)
-        self.song_window.show()#cambiar
+        self.song_window.modificar_successful.connect(self.show_modificar_window)
+        self.modificar_window.modificar_successful.connect(self.back_modificar)
+        self.library_window.add_song_successful.connect(self.add_song)
+        self.song_window.back_song_successful.connect(self.back_song)
+        self.delete_window.delete_successful.connect(self.back_delete)
+        self.modificar_window.show()#cambiar
         
     def show_main_window(self):
         self.cloudy_profile_window.show()
@@ -84,6 +100,22 @@ class AppManager:
     def show_delete_window(self):
         self.song_window.close()
         self.delete_window.show()
+    def show_modificar_window(self):
+        self.song_window.close()
+        self.modificar_window.show()
+    def back_delete(self):
+        self.delete_window.close()
+        self.song_window.show()
+    def back_modificar(self):
+        self.modificar_window.close()
+        self.song_window.show()
+    def back_song(self):
+        self.song_window.close()
+        self.library_window.show()
+    def add_song(self):
+        self.library_window.close()
+        self.song_window.show()
+    
 
 
 app = QtWidgets.QApplication(sys.argv)

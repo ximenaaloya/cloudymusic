@@ -7,7 +7,9 @@ class LibraryController:
     def __init__(self, window, model):
         self.window = window
         self.model = model
-        self.window.btn_playlist.clicked.connect(self.handle_playlist)
+        #self.window.btn_playlist.clicked.connect(self.handle_playlist)
+        self.window.btn_add.clicked.connect(self.add_song)
+        
         self.conexion = Conexion()
         self.conexion.conectar()
 
@@ -15,6 +17,8 @@ class LibraryController:
 
     def handle_playlist(self):
         self.window.library_successful.emit()
+    def add_song(self):
+        self.window.add_song_successful.emit()
 
     '''def cargar_canciones(self):
 

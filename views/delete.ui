@@ -51,7 +51,7 @@ background-color:rgb(133, 121, 252);
      </rect>
     </property>
     <property name="text">
-     <string/>
+     <string>Eliminar</string>
     </property>
     <property name="icon">
      <iconset>
@@ -88,7 +88,7 @@ background-color:rgb(133, 121, 252);
     </property>
     <property name="icon">
      <iconset>
-      <normaloff>../../../../../Downloads/back.png</normaloff>../../../../../Downloads/back.png</iconset>
+      <normaloff>../img/arrow.png</normaloff>../img/arrow.png</iconset>
     </property>
     <property name="class" stdset="0">
      <string>boton</string>
