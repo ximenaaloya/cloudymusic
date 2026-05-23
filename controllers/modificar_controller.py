@@ -100,4 +100,5 @@ class ModificarController:
             self.window.txt_likes.clear()
             self.window.txt_favoritos.clear()
             self.window.txt_song.clear()
-            self.window.modifi_song.emit()
+            self.window.modificar_successful.emit()
+            self.window.mod_song.emit()

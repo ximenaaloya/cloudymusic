@@ -29,6 +29,7 @@ class Library(QtWidgets.QMainWindow):
 
 class Profile(QtWidgets.QMainWindow):
     profile_successful = pyqtSignal()
+    agregar_perfil = pyqtSignal()
     def __init__(self):
         super().__init__()
         uic.loadUi("./views/cloudy_profile.ui", self)
@@ -58,6 +59,7 @@ class Delete(QtWidgets.QMainWindow):
         self.controller = DeleteController(self, self)
 class Modificar(QtWidgets.QMainWindow):
     modificar_successful = pyqtSignal()
+    mod_song = pyqtSignal()
     #
     def __init__(self):
         super().__init__()
@@ -88,10 +90,16 @@ class AppManager:
         self.delete_window.delete_successful.connect(self.back_delete)
 
         self.delete_window.cancion_eliminada.connect(self.song_window.controller.act_tabla)
+        
         self.song_window.agregar_song.connect(self.library_window.controller.act_tabla)
+        self.cloudy_profile_window.agregar_perfil.connect(self.library_window.controller.agregar_perfil)
+
         self.delete_window.cancion_eliminada.connect(self.library_window.controller.act_tabla)
+
+        self.song_window.modificar_successful.connect(self.modificar_window.controller.mod_song)
+        self.modificar_window.mod_song.connect(self.song_window.controller.act_tabla)
         #self.modificar_window.cancion_eliminada.connect(self.song_window.controller.eliminar_cancion)
-        self.delete_window.show()#cambiar
+        self.login_window.show()#cambiar
         
     def show_main_window(self):
         self.cloudy_profile_window.show()

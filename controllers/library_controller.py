@@ -30,6 +30,20 @@ class LibraryController:
                 self.window.table_L.insertRow(row_n)
                 for column_n, data in enumerate(row_d):
                     self.window.table_L.setItem(row_n, column_n, QTableWidgetItem(str(data)))
+    
+    def agregar_perfil(self):
+        self.connection = Conexion()
+        self.connection.conectar()
+        self.window.tabla_perfil.setRowCount(0)
+
+        sql = "SELECT nombre, descripcion, genero_pref FROM perfiles"
+        canciones = self.connection.seleccionar(sql)
+
+        if canciones:
+            for row_n, row_d in enumerate(canciones):
+                self.window.tabla_perfil.insertRow(row_n)
+                for column_n, data in enumerate(row_d):
+                    self.window.tabla_perfil.setItem(row_n, column_n, QTableWidgetItem(str(data)))
 
 
     def handle_playlist(self):

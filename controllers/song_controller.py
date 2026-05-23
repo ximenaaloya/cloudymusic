@@ -57,9 +57,8 @@ class SongController:
             self.connection.insertar(sql, values)
             QtWidgets.QMessageBox.information(self.window, "Registro exitoso", "Canción registrada correctamente.")
             self.cargar_canciones()
-            self.window.agregar_song.emit()#
+            self.window.agregar_song.emit()
 
-            
             self.window.txt_name.clear()
             self.window.txt_artist.clear()
             self.window.txt_album.clear()

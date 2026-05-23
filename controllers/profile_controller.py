@@ -39,13 +39,7 @@ class ProfileController:
             values = (0, nombre, desc, gen)
             self.connection.insertar(sql, values)
             self.window.profile_successful.emit()
-
-            row_position = self.window.table.rowCount()
-            self.window.table.insertRow(row_position)
-
-            self.window.table.setItem(row_position, 0, QtWidgets.QTableWidgetItem(str(nombre)))
-            self.window.table.setItem(row_position, 1, QtWidgets.QTableWidgetItem(str(desc)))
-            self.window.table.setItem(row_position, 2, QtWidgets.QTableWidgetItem(str(gen)))
+            self.window.agregar_perfil.emit()
 
     def change_m(self):
         ruta = "./img/woman.png"
